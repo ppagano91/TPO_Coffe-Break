@@ -1,0 +1,2 @@
+Ctrl + , --> settings
+Ctrl + Shift + p --> Open settings (json) para configuración del VSC
