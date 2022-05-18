@@ -1,0 +1,176 @@
+.footer {
+  & {
+    // max-width: 1200px;
+    background-color: $color-secundario;
+    body.dark & {
+      background-color: $grisOscuro;
+    }
+  }
+  &__container {
+    //NO PUEDO PONER EL MAX WIDTH PORQUE SE DEFORMA EL FOOTER
+    // max-width: 1200px;
+    margin-top: 10px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    // align-items: center;
+    // flex-direction: column;
+
+    // @media (min-width: 700px) {
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    // }
+  }
+
+  &__redes {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    gap: (3 * $size);
+    &__links {
+      display: flex;
+      gap: (4 * $size);
+
+      @media (min-width: 814px) {
+        flex-direction: column;
+        // flex-wrap: wrap;
+        justify-content: center;
+        gap: 2 * $size;
+      }
+    }
+    &--title {
+      color: $negro;
+      font-size: (5 * $size);
+      body.dark & {
+        color: $blanco;
+      }
+    }
+  }
+  &__links {
+    &--logo {
+      width: (10 * $size);
+      height: (10 * $size);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__contacto {
+    & {
+      margin: 20px;
+    }
+    &--title {
+      text-align: center;
+      font-size: (5 * $size);
+      color: $negro;
+      body.dark & {
+        color: $blanco;
+      }
+    }
+    &__links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //   flex-direction: column;
+      gap: 10px;
+      @media (min-width: 814px) {
+        flex-direction: column;
+        // flex-wrap: wrap;
+        justify-content: center;
+      }
+      &--link {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: $negro;
+        align-items: center;
+
+        body.dark & {
+          color: $blanco;
+        }
+
+        @media (min-width: 700px) {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  &__masinfo {
+    & {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    &--container {
+      @media (min-width: 400px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: 600px) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      @media (min-width: 820px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2 * $size;
+      }
+    }
+    &--title {
+      @extend .footer__contacto--title;
+      body.dark & {
+        color: $blanco;
+      }
+    }
+    &--text {
+      display: flex;
+      margin: 10px;
+      padding: 0 10px;
+      flex-direction: column;
+
+      justify-content: center;
+      text-align: center;
+      color: $negro;
+      text-decoration: none;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      body.dark & {
+        color: $blanco;
+      }
+
+      @media (min-width: 700px) {
+        margin: 5px;
+      }
+
+      @media (min-width: 814px) {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        // flex-wrap: wrap;
+        justify-content: center;
+        gap: 2 * $size;
+      }
+    }
+  }
+}

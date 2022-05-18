@@ -1,0 +1,13 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body,
+html {
+  min-height: 100vh;
+  background-color: $blanco;
+  box-sizing: border-box;
+}
