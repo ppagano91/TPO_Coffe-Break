@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/logos/favicon_coffee.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="../mdb/css/mdb.min.css" />
+
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../js/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/ad062c820b.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Coffee Break</title>
+  </head>
+  <body>
+    <section class="header__container" id="header">
+      <header class="header">
+        <div class="header__logo">
+          <button id="logoBtn" class="header__logoBtn">
+            <a href="#">
+              <img
+                class="header__logoBtn--img"
+                src="./images/logo_coffeeBreak.svg"
+                alt=""
+                id="logo"
+              />
+            </a>
+          </button>
+          <h1 class="header__title" id="headerTitle">Coffee Break</h1>
+          <div class="btnSwitch__container">
+            <button class="btnSwitch" id="btnSwitch">
+              <span><i class="fas fa-sun"></i></span>
+              <span><i class="fas fa-moon"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <button id="menuBtn" class="header__menuBtn">
+          <img
+            class="header__menuBtn--img"
+            src="./images/logos/menu_icono.svg"
+            alt=""
+          />
+        </button>
+        <nav id="menu" class="header__nav">
+          <a class="header__links link" href="../index.html">Home</a>
+          <a class="header__links link" href="./pages/contacto.html"
+            >Contacto</a
+          >
+          <a class="header__links link" href="./pages/productos.html"
+            >Productos</a
+          >
+          <a class="header__links link" href="./pages/acercade.html"
+            >Acerca De</a
+          >
+        </nav>
+      </header>
+    </section>
+    <main>
+      <section class="hero__contacto">
+        <div class="hero__contacto__card">
+          <div class="hero__contacto__card--title">
+            <h2>Suscribite a Coffee Break</h2>
+          </div>
+          <div class="hero__contacto__card--text">
+            <h4>Completa el siguiente formulario</h4>
+          </div>
+          <fieldset class="form__container">
+            <form class="form" id="form">
+              <div class="form__info">
+                <label class="form__info--label" for="nombre">Nombre</label>
+                <input
+                  class="form__info--input"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingrese su nombre..."
+                  required
+                />
+              </div>
+
+              <div class="form__info">
+                <label class="form__info--label" for="apellido">Apellido</label>
+                <input
+                  class="form__info--input"
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Ingrese su apellido..."
+                  required
+                />
+              </div>
+              <div class="form__info">
+                <label class="form__info--label" for="correo">Correo</label>
+                <input
+                  class="form__info--input"
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="ejemplo@ejemplo.com..."
+                  required
+                />
+              </div>
+              <div class="form__info">
+                <label class="form__info--label" for="edad">Edad</label>
+                <input
+                  class="form__info--input"
+                  type="number"
+                  id="edad"
+                  name="edad"
+                  step="1"
+                  min="0"
+                  max="99"
+                  required
+                />
+              </div>
+
+              <div class="form__info--genero">
+                <label class="form__info--label" for="genero">Genero</label>
+                <!-- la propiedad name tiene que ser igual en las tres opciones, 
+                            de esta manera indicamos que hacen referencia al mismo selector y
+                            según a cual se le haga click se leerá ese valor -->
+
+                <div class="form__info--label--genero">
+                  <label>Masculino</label>
+                  <input
+                    class="form__info--input-radiusBtn"
+                    type="radio"
+                    id="genero"
+                    name="genero"
+                    value="Masculino"
+                    required
+                  />
+                  <label>Femenino</label>
+                  <input
+                    class="form__info--input-radiusBtn"
+                    type="radio"
+                    id="genero"
+                    name="genero"
+                    value="Femenino"
+                    required
+                  />
+                  <label>Otro</label>
+                  <input
+                    class="form__info--input-radiusBtn"
+                    type="radio"
+                    id="genero"
+                    name="genero"
+                    value="Otro"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form__info">
+                <label class="form__info--label" for="pais">Pais</label>
+                <select name="pais" id="pais">
+                  <option value="Argentina">Argentina</option>
+                  <option value="Venezuela">Venezuela</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Perú">Perú</option>
+                  <option value="Chile">Chile</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <button type="button" id="sendBtn" class="form__info--btn">
+                ENVIAR
+              </button>
+            </form>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="listado-personas">
+        <div class="listado">
+          <h3 class="listado--titulo">
+            Nuevas personas inscriptas en Coffee Break
+          </h3>
+
+          <div id="listado__container" class="listado__container"></div>
+        </div>
+      </section>
+      <!-- <h3>¿CÓMO AGREGAR UNA IMAGEN PROPORCIONADA AL FONDO DE LA LISTA?</h3>
+      <h3>¿CÓMO DESAPARECE LA LISTA HASTA QUE APAREZCAN PERSONAS?</h3> -->
+    </main>
+    <!-- FOOTER -->
+
+    <section class="footer__container">
+      <footer class="text-center text-white w-100">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3cd93a"
+              href="#!"
+              role="button"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #0082ca"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #333333"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022
+          <a class="text-white" href="https://linkedin.com">Patricio Pagano</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
+  </body>
+</html>
