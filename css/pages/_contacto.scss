@@ -1,7 +1,7 @@
 .hero {
   &__contacto {
     height: 400px;
-    margin-top: 77px;
+    margin-top: 4rem;
     background-image: url('../../images/coffee_bartender.jpg');
     background-size: cover;
 
@@ -26,7 +26,6 @@
 
     &__card {
       background-color: rgba(255, 255, 255, 0.5);
-      margin: 30px;
       padding: 10px;
       border-radius: 20px;
       border: 1px solid black;
@@ -35,18 +34,23 @@
       text-align: center;
       align-self: center;
       gap: 10px;
-      // &:hover {
-      //   background-color: rgb(223, 190, 2);
-      //   transition: background-color 0.5s linear;
-      // }
-      &--title {
-        font-size: 2rem;
+      &:hover {
+        background-color: rgba(222, 184, 135, 0.5);
+        transition: background-color 0.5s linear;
+        color: black;
       }
-      &--text {
-        h4 {
-          font-size: 3rem;
-          // font-weight: lighter;
-        }
+
+      &--title {
+        color: black;
+        margin: 0;
+        // font-weight: 700;
+      }
+      &--subtitle {
+        color: black;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: lighter;
+        margin: 0;
       }
       &__button {
         padding: 10px;
@@ -78,7 +82,6 @@
   &__container {
     padding: 10px;
     &:hover {
-      background-color: rgb(223, 190, 2);
       transition: background-color 0.5s linear;
     }
   }
@@ -93,7 +96,7 @@
     }
     &--input {
       //   background-color: rgba(255, 255, 255, 0.5);
-      &-radiusBtn {
+      &-radioBtn {
         // display: flex;
         // flex-direction: column;
       }
@@ -101,13 +104,15 @@
     &--btn {
       background-color: $color-primario;
       align-self: center;
-      padding: 5px;
+      padding: 0.5rem;
       border-radius: 10px;
       color: ivory;
       text-decoration: none;
-      //   &:hover {
-      //     transform: scale(1.1);
-      //   }
+      &:hover {
+        background-color: antiquewhite;
+        font-weight: 700;
+        color: black;
+      }
       &:active {
         transform: scale(0.9);
       }
@@ -234,50 +239,5 @@
 @media screen and (min-width: 768px) {
   .item-border {
     border: 4px solid rgba(250, 250, 250, 0.1);
-  }
-}
-
-.hero {
-  &__card {
-    margin: auto;
-    padding: 10px 5px;
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-self: center;
-    gap: 10px;
-    &:hover {
-      color: white;
-    }
-
-    &--title {
-      font-size: 20px;
-    }
-    &--text {
-      h4 {
-        font-size: 20px;
-        // font-weight: lighter;
-      }
-    }
-    &__button {
-      padding: 10px;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      gap: 20px;
-      &--btn {
-        background-color: $color-primario;
-        opacity: 0.95;
-        padding: 10px;
-        border-radius: 20px;
-        color: ivory;
-        text-decoration: none;
-        align-self: center;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
   }
 }
