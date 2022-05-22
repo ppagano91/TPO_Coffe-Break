@@ -2,12 +2,13 @@
 html {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body,
 html {
   min-height: 100vh;
-  background-color: $blanco;
+  background-color: burlywood;
+  background-color: rgba($color: burlywood, $alpha: 0.5);
   box-sizing: border-box;
 }
