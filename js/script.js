@@ -34,4 +34,8 @@ const btnSwitch = document.getElementById('btnSwitch');
 btnSwitch.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   btnSwitch.classList.toggle('active');
+  // if (btnSwitch.classList[1] == 'active') {
+  //   header.style.background = 'burlywood';
+  //   headerTitle.style.color = 'black';
+  // }
 });
