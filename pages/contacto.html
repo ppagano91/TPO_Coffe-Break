@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="../index.css" />
     <script src="../js/script.js" defer></script>
+    <script src="../js/contacto.js" defer></script>
     <script
       src="https://kit.fontawesome.com/ad062c820b.js"
       crossorigin="anonymous"
@@ -35,7 +36,7 @@
             <a href="#">
               <img
                 class="header__logoBtn--img"
-                src="./images/logo_coffeeBreak.svg"
+                src="../images/logo_coffeeBreak.svg"
                 alt=""
                 id="logo"
               />
@@ -53,33 +54,29 @@
         <button id="menuBtn" class="header__menuBtn">
           <img
             class="header__menuBtn--img"
-            src="./images/logos/menu_icono.svg"
+            src="../images/logos/menu_icono.svg"
             alt=""
           />
         </button>
         <nav id="menu" class="header__nav">
           <a class="header__links link" href="../index.html">Home</a>
-          <a class="header__links link" href="./pages/contacto.html"
-            >Contacto</a
-          >
-          <a class="header__links link" href="./pages/productos.html"
-            >Productos</a
-          >
-          <a class="header__links link" href="./pages/acercade.html"
-            >Acerca De</a
-          >
+          <a class="header__links link" href="./contacto.html">Contacto</a>
+          <a class="header__links link" href="./productos.html">Productos</a>
+          <a class="header__links link" href="./acercade.html">Acerca De</a>
         </nav>
       </header>
     </section>
+
+    <!-- HERO + FORMULARIO -->
     <main>
       <section class="hero__contacto">
         <div class="hero__contacto__card">
-          <div class="hero__contacto__card--title">
-            <h2>Suscribite a Coffee Break</h2>
-          </div>
-          <div class="hero__contacto__card--text">
-            <h4>Completa el siguiente formulario</h4>
-          </div>
+          <h4 class="hero__contacto__card--title">
+            Se parte de la Comunidad Coffee Break
+          </h4>
+          <p class="hero__contacto__card--subtitle">Completa con tus datos</p>
+
+          <!-- Formulario -->
           <fieldset class="form__container">
             <form class="form" id="form">
               <div class="form__info">
@@ -117,15 +114,14 @@
                 />
               </div>
               <div class="form__info">
-                <label class="form__info--label" for="edad">Edad</label>
+                <label class="form__info--label" for="edad"
+                  >Fecha de Nacimiento</label
+                >
                 <input
                   class="form__info--input"
-                  type="number"
+                  type="date"
                   id="edad"
                   name="edad"
-                  step="1"
-                  min="0"
-                  max="99"
                   required
                 />
               </div>
@@ -139,7 +135,7 @@
                 <div class="form__info--label--genero">
                   <label>Masculino</label>
                   <input
-                    class="form__info--input-radiusBtn"
+                    class="form__info--input-radioBtn"
                     type="radio"
                     id="genero"
                     name="genero"
@@ -148,7 +144,7 @@
                   />
                   <label>Femenino</label>
                   <input
-                    class="form__info--input-radiusBtn"
+                    class="form__info--input-radioBtn"
                     type="radio"
                     id="genero"
                     name="genero"
@@ -157,7 +153,7 @@
                   />
                   <label>Otro</label>
                   <input
-                    class="form__info--input-radiusBtn"
+                    class="form__info--input-radioBtn"
                     type="radio"
                     id="genero"
                     name="genero"
@@ -168,7 +164,7 @@
               </div>
 
               <div class="form__info">
-                <label class="form__info--label" for="pais">Pais</label>
+                <label class="form__info--label" for="pais">Nacionalidad</label>
                 <select name="pais" id="pais">
                   <option value="Argentina">Argentina</option>
                   <option value="Venezuela">Venezuela</option>
@@ -190,15 +186,18 @@
           </fieldset>
         </div>
       </section>
-
       <section class="listado-personas">
-        <div class="listado">
+        <button type="button" class="" style="display: none" id="comunidadBtn">
+          Comunidad Coffee Break
+        </button>
+
+        <!-- <div class="listado">
           <h3 class="listado--titulo">
             Nuevas personas inscriptas en Coffee Break
           </h3>
 
           <div id="listado__container" class="listado__container"></div>
-        </div>
+        </div> -->
       </section>
       <!-- <h3>¿CÓMO AGREGAR UNA IMAGEN PROPORCIONADA AL FONDO DE LA LISTA?</h3>
       <h3>¿CÓMO DESAPARECE LA LISTA HASTA QUE APAREZCAN PERSONAS?</h3> -->
