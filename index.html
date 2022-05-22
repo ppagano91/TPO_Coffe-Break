@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/logos/favicon_coffee.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="mdb/css/mdb.min.css" />
 
     <link rel="stylesheet" href="/index.css" />
-    <script src="/js/script.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/ad062c820b.js"
       crossorigin="anonymous"
@@ -15,7 +28,7 @@
     <title>Coffee Break</title>
   </head>
   <body>
-    <div class="header__container" id="header">
+    <section class="header__container" id="header">
       <header class="header">
         <div class="header__logo">
           <button id="logoBtn" class="header__logoBtn">
@@ -45,14 +58,181 @@
           />
         </button>
         <nav id="menu" class="header__nav">
-          <a class="header__links link" href="../index.html">Home</a>
-          <a class="header__links link" href="./contactos.html">Contactos</a>
-          <a class="header__links link" href="./productos.html">Productos</a>
-          <a class="header__links link" href="./acercade.html">Acerca De</a>
+          <a class="header__links link" href="./index.html">Home</a>
+          <a class="header__links link" href="./pages/contacto.html"
+            >Contacto</a
+          >
+          <a class="header__links link" href="./pages/productos.html"
+            >Productos</a
+          >
+          <a class="header__links link" href="./pages/acercade.html"
+            >Acerca De</a
+          >
         </nav>
       </header>
-      <section class="hero__container"></section>
-      <section class="footer__container"></section>
-    </div>
+    </section>
+
+    <main>
+      <div class="hero__container">
+        <section class="hero">
+          <div class="hero__video">
+            <div class="card-item">
+              <div class="item-border" style="cursor: default">
+                <div class="item-image" alt="">
+                  <div class="hero__card" style="cursor: default">
+                    <div class="hero__card--title">
+                      <h2>Coffee Break</h2>
+                    </div>
+
+                    <div class="hero__card--text">
+                      <h4>El mejor café de Bahía Blanca</h4>
+                    </div>
+                    <div class="hero__card__button">
+                      <a
+                        href="./pages/acercade.html"
+                        alt="Enlace a sección Acerca De"
+                        class="hero__card__button--btn"
+                        >¡Conocé más!</a
+                      >
+                    </div>
+                  </div>
+                  <!-- <img src="/test/disney.png" alt="" class="item-image" /> -->
+                </div>
+                <video
+                  src="/videos/videoplayback.mp4"
+                  alt=""
+                  class="item-image hover-image"
+                  autoplay
+                  loop
+                ></video>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="suscripcion__container">
+      <!--   Inscripición a Coffee Break     -->
+      <div class="suscripcion">
+        <div class="suscripcion__content">
+          <img
+            class="suscripcion__image g1"
+            src="/images/keep-calm-and-drink-coffee.jpg"
+            alt="Keep Calm and Drink Coffee"
+          />
+
+          <div class="suscripcion__text">
+            <div class="suscripcion__text--link">
+              <h5>¡Inicia tu día con una taza de café!</h5>
+              <p>
+                Encuentranos en
+                <strong
+                  ><a style="color: black" href="#map">Coffee Break</a></strong
+                >
+              </p>
+            </div>
+            <div class="suscripcion__card">
+              <h4>Comunidad Coffee Break</h4>
+              <p>
+                Se parte de la comunidad para obtener información y beneficios
+                exclusivos en nuestros productos
+              </p>
+              <a href="/pages/contacto.html">Suscripción</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map__section" id="map">
+      <h4 class="map--title">¡Aquí te esperamos!</h4>
+      <p class="map--subtitle">Coffe Break - Bahía Blanca</p>
+      <div class="map__iframe__conteiner">
+        <iframe
+          class="map__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1166.1046014216797!2d-62.26239518435334!3d-38.714912467091516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda352ecb26c35%3A0x315190d04b45bec7!2sDorrego%2079%2C%20B8000%20FLB%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1653139725541!5m2!1ses-419!2sar"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <section class="footer__container">
+      <footer class="text-center text-white w-100">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3cd93a"
+              href="#!"
+              role="button"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #0082ca"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #333333"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022
+          <a class="text-white" href="https://linkedin.com">Patricio Pagano</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
   </body>
 </html>
