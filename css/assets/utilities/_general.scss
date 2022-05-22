@@ -2,5 +2,6 @@ body {
   transition: 1s ease all;
   &.dark {
     background-color: $negro;
+    color: antiquewhite;
   }
 }
