@@ -4,9 +4,444 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
+    <link rel="shortcut icon" href="../images/logos/favicon_coffee.svg" />
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="../mdb/css/mdb.min.css" />
+
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../js/components/script.js" defer></script>
+    <script src="../js/contacto.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/ad062c820b.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Coffee Break</title>
   </head>
   <body>
-    <h4>Nuestros Productos</h4>
+    <section class="header__container" id="header">
+      <header class="header">
+        <div class="header__logo">
+          <button id="logoBtn" class="header__logoBtn">
+            <a href="#">
+              <img
+                class="header__logoBtn--img"
+                src="../images/logo_coffeeBreak.svg"
+                alt=""
+                id="logo"
+              />
+            </a>
+          </button>
+          <h1 class="header__title" id="headerTitle">Coffee Break</h1>
+          <div class="btnSwitch__container">
+            <button class="btnSwitch" id="btnSwitch">
+              <span><i class="fas fa-sun"></i></span>
+              <span><i class="fas fa-moon"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <button id="menuBtn" class="header__menuBtn">
+          <img
+            class="header__menuBtn--img"
+            src="../images/logos/menu_icono.svg"
+            alt=""
+          />
+        </button>
+        <nav id="menu" class="header__nav">
+          <a class="header__links link" href="../index.html">Home</a>
+          <a class="header__links link" href="./contacto.html">Contacto</a>
+          <a class="header__links link" href="./productos.html">Productos</a>
+          <a class="header__links link" href="./acercade.html">Acerca De</a>
+        </nav>
+      </header>
+    </section>
+
+    <!-- HERO + FORMULARIO -->
+    <main>
+      <section class="hero__productos">
+        <div class="hero__productos__card">
+          <h4 class="hero__productos__card--title">We are Coffee Break</h4>
+
+          <a class="hero__productos__card--link" href="#catalogo"
+            >Ver Catálgo</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <section class="catalogo__container" id="catalogo">
+      <h2 class="catalogo--title">PRODUCTOS</h2>
+      <h3 class="catalogo--subtitle">Cafés & bebidas</h3>
+      <!-- CATÁLOGO DE BEBIDAS -->
+      <section class="catalogo__cafes" id="cards">
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/cafe_artlatte.jpg"
+            alt="Latte Art"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Café + Latte Art</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/cafe_3capas2.jpg"
+            alt="Café 3 capas"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Café 3 capas</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/cafe_macchiato.jpg"
+            alt="Café Macchiato"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Café Macchiato</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/cafe_irlandes.jpg"
+            alt="Café Irlandés"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Café Irlandés</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/capuccino.jpg"
+            alt="Capuccino"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Capuccino</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/frapuccino.jpg"
+            alt="Frapuccino"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Frapuccino</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/submarino.jpg"
+            alt="Submarino"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Submarino</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+
+        <div class="catalogo__cafes__card">
+          <img
+            class="catalogo__cafes__card-image"
+            src="../images/productos/cafe_solo.jpg"
+            alt="Café Americano"
+          />
+          <div class="catalogo__cafes__card-text">
+            <h4 class="catalogo__cafes__card-title">Café Americano</h4>
+            <p class="catalogo__cafes__card-paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non quam
+              quis delectus provident reprehenderit harum similique soluta
+              animi! Dolore ex dolorum itaque molestiae nesciunt exercitationem
+              sapiente cumque, aliquid natus doloribus?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <h3 class="catalogo--subtitle">Cafeteras</h3>
+      <!-- CATÁLOGO DE CAFETERAS -->
+      <section class="catalogo__cafeteras">
+        <div
+          class="catalogo__cafeteras__slider slider owl-carousel"
+          id="slider"
+        >
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_italiana2.jpg"
+                alt="Cafetera Italiana"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera Italiana</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <div class="btn">Leer más</div>
+            </div>
+          </div>
+
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_sifon.jpg"
+                alt="Cafetera Sifón"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera Sifón</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <div class="btn">Leer más</div>
+            </div>
+          </div>
+
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_francesa.webp"
+                alt="Cafetera Francesa"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera Francesa</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <div class="btn">Leer más</div>
+            </div>
+          </div>
+
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_chemex.jpg"
+                alt="Cafetera Chemex"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera Chemex</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <div class="btn">Leer más</div>
+            </div>
+          </div>
+
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_aeropress3.png"
+                alt="Cafetera Aeropress"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera Aeropress</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <div class="btn">Leer más</div>
+            </div>
+          </div>
+
+          <div class="catalogo__cafeteras__card">
+            <div class="catalogo__cafeteras__card-img">
+              <img
+                src="../images/productos/cafetera_goteo_v603.jpg"
+                alt="Cafetera V60"
+              />
+            </div>
+            <div class="catalogo__cafeteras__card-content">
+              <h2 class="title">Cafetera V60</h2>
+              <h3 class="subtitle">PRECIO</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                quam quis delectus provident reprehenderit harum similique
+                soluta animi! Dolore ex dolorum itaque molestiae nesciunt
+                exercitationem sapiente cumque, aliquid natus doloribus?
+              </p>
+              <a class="btn">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h3 class="catalogo--subtitle">Otros productos</h3>
+    </section>
+    <!-- FOOTER -->
+
+    <section class="footer__container">
+      <footer class="text-center text-white w-100">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3cd93a"
+              href="#!"
+              role="button"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #0082ca"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #333333"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2022
+          <a class="text-white" href="https://linkedin.com">Patricio Pagano</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
+    <script>
+      $('#slider').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+      });
+    </script>
   </body>
 </html>
