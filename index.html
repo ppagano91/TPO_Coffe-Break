@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="/index.css" />
 
     <!-- JS  -->
-    <script src="./js/components/header.js" defer></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/components/script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/ad062c820b.js"
       crossorigin="anonymous"
@@ -44,7 +43,9 @@
               />
             </a>
           </button>
-          <h1 class="header__title" id="headerTitle">Coffee Break</h1>
+          <div>
+            <h1 class="header__title" id="headerTitle">Coffee Break</h1>
+          </div>
           <div class="btnSwitch__container">
             <button class="btnSwitch" id="btnSwitch">
               <span><i class="fas fa-sun"></i></span>
@@ -61,15 +62,15 @@
           />
         </button>
         <nav id="menu" class="header__nav hidden">
-          <a class="header__links link" href="#">Home</a>
+          <a class="header__links link" href="/">HOME</a>
           <a class="header__links link" href="./pages/contacto.html"
-            >Contacto</a
+            >CONTACTO</a
           >
           <a class="header__links link" href="./pages/productos.html"
-            >Productos</a
+            >PRODUCTOS</a
           >
           <a class="header__links link" href="./pages/acercade.html"
-            >Acerca De</a
+            >ACERCA DE</a
           >
         </nav>
       </header>
@@ -120,7 +121,7 @@
       <div class="suscripcion">
         <div class="suscripcion__content">
           <img
-            class="suscripcion__image g1"
+            class="suscripcion__image"
             src="/images/keep-calm-and-drink-coffee.jpg"
             alt="Keep Calm and Drink Coffee"
           />
@@ -130,9 +131,7 @@
               <h5>¡Inicia tu día con una taza de café!</h5>
               <p>
                 Encuentranos en
-                <strong
-                  ><a style="color: black" href="#map">Coffee Break</a></strong
-                >
+                <strong><a href="#map">Coffee Break</a></strong>
               </p>
             </div>
             <div class="suscripcion__card">
@@ -151,13 +150,11 @@
     <section class="map__section" id="map">
       <h4 class="map--title">¡Aquí te esperamos!</h4>
       <p class="map--subtitle">Coffe Break - Bahía Blanca</p>
-      <div class="map__iframe__conteiner">
+      <div class="map__iframe__container">
         <iframe
           class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1166.1046014216797!2d-62.26239518435334!3d-38.714912467091516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eda352ecb26c35%3A0x315190d04b45bec7!2sDorrego%2079%2C%20B8000%20FLB%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1653139725541!5m2!1ses-419!2sar"
-          allowfullscreen="true"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
         >
         </iframe>
       </div>
