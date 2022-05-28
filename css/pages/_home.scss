@@ -153,12 +153,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    // gap: 0.5rem;
   }
   &__image {
     max-width: 1200px;
     height: auto;
-    width: 55rem;
+    width: 52rem;
   }
   &__text {
     & {
@@ -173,6 +173,12 @@
       background-color: antiquewhite;
       border-radius: 1rem;
       padding: 0.5rem;
+      transition: background-color 2s;
+      body.dark & {
+        background-color: rgb(25, 25, 25);
+        color: #f1f1f1;
+        transition: background-color 2s;
+      }
       h5 {
         font-size: large;
       }
@@ -182,11 +188,20 @@
       }
       p {
         margin-bottom: 0;
+        a {
+          color: black;
+          transition: color 2s;
+          body.dark & {
+            color: #f1f1f1;
+          }
+        }
       }
     }
   }
   &__card {
-    padding: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 20rem;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -217,14 +232,14 @@
 // Map Section
 .map {
   &__section {
-    margin-top: 20px;
-    width: 100%;
+    max-width: 1200px;
     gap: 5px;
 
-    display: flex;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto;
   }
   &--title {
     text-align: center;
@@ -236,7 +251,7 @@
   }
   &__iframe {
     & {
-      width: 1200px;
+      width: 90%;
       height: 20rem;
       border-radius: 20px;
       &:hover {
@@ -245,10 +260,119 @@
     }
 
     &__container {
-      width: auto;
-      padding: 1rem 2rem;
+      width: 100%;
+      margin: auto;
+
       display: flex;
       justify-content: center;
+      align-content: center;
+    }
+  }
+}
+
+// MAX WIDTH 1200px CORRECCIONES NECESARIAS
+@media screen and (max-width: 1200px) {
+  .suscripcion {
+    &__image {
+      display: block;
+      height: 20rem;
+      width: auto;
+    }
+
+    &__text {
+      &--link {
+        margin: 0.5rem;
+        max-width: 20rem;
+        width: auto;
+      }
+    }
+  }
+  &__card {
+    margin: 1rem;
+    padding: 0.5rem;
+    max-width: 20rem;
+    width: auto;
+  }
+}
+
+// MAX WIDTH 1024px TABLET
+@media screen and (max-width: 1024px) {
+  .suscripcion {
+    &__container {
+      margin-top: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__content {
+      max-width: 1200px;
+      flex-direction: column;
+    }
+    &__image {
+      display: block;
+      height: fit-content;
+      width: 100%;
+    }
+
+    &__text {
+      &--link {
+        margin: 0.5rem;
+        max-width: 20rem;
+        width: auto;
+      }
+    }
+  }
+  &__card {
+    margin: 1rem;
+    padding: 0.5rem;
+    max-width: 20rem;
+    width: auto;
+  }
+}
+
+// MAX WIDTH 1024px TELÉFONOS SMART
+@media screen and (max-width: 600px) {
+  .suscripcion {
+    &__image {
+      display: block;
+      max-width: 600px;
+      height: auto;
+    }
+
+    &__text {
+      &--link {
+        margin: 0.5rem;
+        width: auto;
+      }
+    }
+  }
+  &__card {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    max-width: 600px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .suscripcion {
+    &__image {
+      display: block;
+      max-width: 300px;
+      height: auto;
+    }
+    &__text {
+      &--link {
+        margin: 0.5rem;
+        width: auto;
+      }
+    }
+    &__card {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      max-width: 360px;
+      width: auto;
     }
   }
 }

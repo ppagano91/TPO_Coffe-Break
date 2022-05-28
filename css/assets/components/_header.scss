@@ -1,14 +1,15 @@
 .header {
   & {
-    // padding: 0 1rem;
-
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-
     max-width: 1200px;
     text-align: center;
-    padding-top: 0.25rem;
+    // padding-top: 0.25rem;
+
+    @media (max-width: 1200px) {
+      margin: 0 1rem;
+    }
   }
   &__container {
     text-align: center;
@@ -17,12 +18,12 @@
     width: 100%;
     align-content: center;
     z-index: 2;
-    transition: background-color 2s;
-    transition: color 2s;
 
     align-items: center;
     justify-content: center;
     top: 0;
+
+    transition: background-color 2s;
 
     body.dark & {
       background-color: rgb(25, 25, 25);
@@ -33,10 +34,7 @@
 
   &__logo {
     display: flex;
-
     align-items: center;
-    justify-content: center;
-    text-align: center;
     gap: 1rem;
     margin: auto 0;
     flex: 1;
@@ -48,6 +46,37 @@
 
     &--img {
       width: 4em;
+      @media (max-width: 760px) {
+        width: 3em;
+      }
+      @media (max-width: 300px) {
+        width: 2em;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    color: black;
+    font-weight: 700;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    transition: color 2s;
+
+    @media (max-width: 1024px) {
+      font-size: xx-large;
+    }
+    @media (max-width: 760px) {
+      font-size: x-large;
+    }
+    @media (max-width: 400px) {
+      font-size: medium;
+    }
+
+    body.dark & {
+      color: #f1f1f1;
+      transition: color 2s;
     }
   }
 
@@ -63,8 +92,15 @@
     align-items: center;
     flex-direction: column;
     flex: 1;
+
     @media (max-width: 760px) {
       background-color: burlywood;
+      transition: background-color 2s;
+      body.dark & {
+        background-color: rgb(25, 25, 25);
+        color: #f1f1f1;
+        transition: background-color 2s;
+      }
     }
 
     @media (min-width: 760px) {
@@ -76,7 +112,8 @@
   }
   &__links {
     text-decoration: none;
-    color: rgb(0, 60, 30);
+    font-size: x-large;
+    color: black;
     font-weight: 700;
     padding: 0 0.5rem;
     transition: color 2s;
@@ -96,14 +133,15 @@
       transition: color 2s;
     }
 
-    @media (min-width: 760px) {
-      display: flex;
-      flex-direction: column;
-      font-size: 20px;
-      width: auto;
-      // padding: 20px 0;
-      justify-content: center;
-      text-align: center;
+    @media (max-width: 1200px) {
+      font-size: large;
+    }
+    @media (max-width: 1024px) {
+      font-size: small;
+    }
+    @media (max-width: 759px) {
+      font-size: large;
+      display: block;
     }
   }
   &__menuBtn {
@@ -114,6 +152,11 @@
 
     &--img {
       width: 2em;
+      body.dark & {
+        background-color: antiquewhite;
+        padding: 0.25rem;
+        border-radius: 20%;
+      }
 
       &:active {
         transform: scale(0.9);
@@ -132,7 +175,7 @@
     & {
       background-color: #343d5b;
       transition: background-color 1s;
-      border-radius: 1000px;
+      border-radius: 2rem;
       border: none;
       position: relative;
       cursor: pointer;
@@ -155,7 +198,7 @@
       }
 
       &.active {
-        background: orange;
+        background-color: goldenrod;
         transition: background-color 1s;
         color: black;
 
@@ -175,237 +218,6 @@
     }
   }
 }
-
-// .header {
-//   & {
-//     align-items: center;
-//     padding: 5px;
-//     display: flex;
-//     justify-content: space-between;
-//     background-color: $color-secundario;
-//     padding: 0 20px;
-
-//     position: fixed;
-//     top: 0;
-//     width: 100%;
-//     z-index: 2;
-
-//     body.dark & {
-//       background-color: $grisOscuro;
-//     }
-
-//     @media (min-width: 1280px) {
-//       // max-width: 1200px;
-//       margin: 0 auto;
-//     }
-//   }
-//   &__container {
-//     position: relative;
-//     width: 100%;
-
-//     @media (min-width: 1280px) {
-//       // max-width: 1200px;
-//       margin: 0 auto;
-//     }
-//   }
-
-//   &__logo {
-//     display: flex;
-//     flex: 1;
-//     align-items: center;
-
-//     @media (min-width: 760px) {
-//       flex: 2;
-//     }
-//     @media (min-width: 1000px) {
-//       flex: 2;
-//     }
-//     .switch {
-//       padding: 10px;
-//     }
-//   }
-//   &__title {
-//     padding: 5px;
-//     color: $negro;
-//     font-size: (5 * $size);
-//     text-align: center;
-
-//     body.dark & {
-//       color: $blanco;
-//     }
-
-//     @media (min-width: 760px) {
-//       font-size: (8 * $size);
-//     }
-//     @media (min-width: 1000px) {
-//       font-size: (10 * $size);
-//     }
-//   }
-
-//   &__logoBtn {
-//     background: none;
-//     background-color: none;
-//     border: none;
-//     &--img {
-//       width: (16 * $size);
-
-//       &:hover {
-//         cursor: pointer;
-//       }
-
-//       @media (min-width: 760px) {
-//         width: (20 * $size);
-//       }
-
-//       @media (min-width: 1000px) {
-//         width: (20 * $size);
-//       }
-//     }
-//     &:active {
-//       // cursor: pointer;
-//       // color: $color-secundario;
-//       transform: scale(0.9);
-//     }
-//   }
-
-//   &__nav {
-//     display: none;
-//     justify-content: right;
-//     position: absolute;
-//     top: 100%;
-//     left: 0;
-//     right: 0;
-//     padding: 10px 0;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     flex: 1;
-
-//     body.dark & {
-//       background-color: $grisOscuro;
-//     }
-
-//     @media (max-width: 760px) {
-//       background-color: $color-secundario;
-//     }
-//     @media (min-width: 760px) {
-//       position: static;
-//       width: 100%;
-//       //   top: 0;
-//       //   right: 0;
-//       //   left: 0;
-//       flex-direction: row;
-//       gap: 10px;
-//       flex: 3;
-//     }
-//     @media (min-width: 1000px) {
-//       flex: 3;
-//     }
-//   }
-//   &__menuBtn {
-//     background: none;
-//     background-color: none;
-//     border: none;
-//     display: flex;
-//     flex: 1;
-//     justify-content: right;
-//     &--img {
-//       width: 30px;
-//       // margin-right: 10px;
-
-//       @media (min-width: 760px) {
-//         width: (10 * $size);
-//       }
-
-//       &:active {
-//         // cursor: pointer;
-//         // color: $color-secundario;
-//         transform: scale(0.9);
-//       }
-//     }
-
-//     @media (min-width: 760px) {
-//       display: none;
-//     }
-//   }
-
-//   &__links {
-//     display: flex;
-//     color: $negro;
-//     font-weight: bold;
-//     text-decoration: none;
-//     font-size: 20px;
-//     padding: 10px 0;
-//     width: 100%;
-//     justify-content: center;
-//     text-align: center;
-
-//     body.dark & {
-//       color: $blanco;
-//     }
-
-//     &:active {
-//       background-color: $color-secundario;
-//       padding: 5px 0;
-//       border-radius: 10px;
-//       color: $negro;
-//     }
-
-//     @media (min-width: 760px) {
-//       display: flex;
-//       font-size: 20px;
-//       width: auto;
-//       padding: 20px 0;
-//     }
-//     @media (min-width: 1000px) {
-//       font-size: (5 * $size);
-//     }
-//   }
-
-//   .btnSwitch {
-//     background-color: #343d5b;
-//     border-radius: 1000px;
-//     border: none;
-//     position: relative;
-//     cursor: pointer;
-//     display: flex;
-//     outline: none;
-
-//     &::after {
-//       content: '';
-//       display: block;
-//       width: 30px;
-//       height: 30px;
-//       position: absolute;
-//       background: #f1f1f1;
-//       top: 0;
-//       left: 0;
-//       right: unset;
-//       border-radius: 100px;
-//       transition: 0.3s ease all;
-//       box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-//     }
-
-//     &.active {
-//       background: orange;
-//       color: black;
-
-//       &::after {
-//         right: 0;
-//         left: unset;
-//       }
-//     }
-
-//     span {
-//       width: 30px;
-//       height: 30px;
-//       line-height: 30px;
-//       display: block;
-//       background: none;
-//       color: ivory;
-//     }
-//   }
-// }
 
 .hidden {
   display: none;
