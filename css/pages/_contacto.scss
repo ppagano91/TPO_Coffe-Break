@@ -10,7 +10,7 @@
 
     justify-content: center;
     @media (min-width: 1000px) {
-      height: 600px;
+      height: 800px;
       background-size: cover;
       filter: grayscale(100%);
 
@@ -33,9 +33,9 @@
       flex-direction: column;
       text-align: center;
       align-self: center;
-      gap: 10px;
+      // gap: 10px;
       &:hover {
-        background-color: rgba(222, 184, 135, 0.5);
+        background-color: rgba(222, 184, 135, 0.8);
         transition: background-color 0.5s linear;
         color: black;
       }
@@ -83,16 +83,60 @@
     padding: 10px;
     &:hover {
       transition: background-color 0.5s linear;
+      color: black;
+      .form-control--label {
+        color: black;
+      }
     }
   }
-  &__info {
-    display: flex;
-    gap: 10px;
-    padding: 5px 0px;
+  &-control {
+    & {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      // gap: 10px;
+      padding: 5px 0px;
+
+      &.ok input {
+        border: 1px solid;
+        border-color: #0de61f;
+      }
+
+      &.error {
+        & input {
+          border: 1px solid;
+          border-color: #fe5f55;
+        }
+        & span {
+          visibility: visible;
+          color: #e74c3c;
+          font-weight: 700;
+        }
+      }
+      & span {
+        visibility: hidden;
+        // position: absolute;
+        font-size: small;
+        font-weight: 500;
+        text-align: right;
+      }
+    }
     &--label {
       font-weight: bold;
       display: flex;
       align-items: flex-start;
+      text-align: center;
+      color: black;
+      &--genero {
+        color: black;
+        text-align: center;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
     &--input {
       //   background-color: rgba(255, 255, 255, 0.5);
@@ -116,6 +160,75 @@
       &:active {
         transform: scale(0.9);
       }
+    }
+  }
+}
+
+// MODAL
+.modal {
+  &-content {
+    width: 40%;
+    height: auto;
+    background-color: antiquewhite;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    // overflow: hidden;
+    border-radius: 10px;
+
+    & .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-color: #c44a4a;
+      color: #fff;
+      line-height: 25px;
+      cursor: pointer;
+      border-radius: 50%;
+      margin-bottom: 0;
+    }
+  }
+  &-container {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-close {
+    transform: translateY(-200%);
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // gap: 1rem;
+    h2 {
+      background: rgb(8, 151, 80);
+      color: antiquewhite;
+      margin-bottom: 0;
+    }
+    & > p {
+      font-size: x-large;
+      color: black;
+      text-align: center;
+      margin-bottom: 0;
+      padding: 1rem 0.5rem;
     }
   }
 }
