@@ -18,7 +18,6 @@ const changeHeaderColor = () => {
   // logoBtn.style.background = rgb2;
 
   for (let link of links) {
-    // console.log(link);
     link.style.color = rgb2;
   }
   headerTitle.style.color = rgb2;
@@ -39,3 +38,13 @@ btnSwitch.addEventListener('click', () => {
   //   headerTitle.style.color = 'black';
   // }
 });
+
+// Menú Hamburguesa
+const menu = document.getElementById('menu');
+const menuBtn = document.getElementById('menuBtn');
+
+const toggleMenu = () => {
+  menu.classList.toggle('hidden');
+};
+
+menuBtn.addEventListener('click', toggleMenu);
