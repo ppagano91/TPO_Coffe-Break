@@ -66,20 +66,29 @@
 }
 
 .catalogo {
-  & {
-  }
   &__container {
     margin-top: 2rem;
     color: black;
   }
   &--title {
+    background-color: rgb(160, 110, 60);
     text-align: center;
     font-weight: 700;
+
+    body.dark & {
+      color: #f1f1f1;
+      transition: background-color 2s;
+    }
   }
   &--subtitle {
+    margin-top: 1rem;
     margin-left: 4rem;
     margin-bottom: 2rem;
-    gap: 1rem;
+
+    body.dark & {
+      color: #f1f1f1;
+      transition: background-color 2s;
+    }
   }
 
   &__cafes {
@@ -118,6 +127,10 @@
 
       &-text {
         padding: 0.25rem 1rem;
+        body.dark & {
+          color: #f1f1f1;
+          transition: background-color 2s;
+        }
       }
 
       &-title {
@@ -147,7 +160,6 @@
       height: 100%;
       place-items: center;
       text-align: center;
-      // background: #f2f2f2;
     }
     &__slider {
       max-width: 1200px;
@@ -187,6 +199,10 @@
         & .title {
           font-size: 25px;
           font-weight: 600;
+          body.dark & {
+            color: #f1f1f1;
+            transition: background-color 2s;
+          }
         }
         & .subtitle {
           font-size: 20px;
@@ -197,6 +213,10 @@
         & .paragraph {
           text-align: justify;
           margin: 10px 0;
+          body.dark & {
+            color: #f1f1f1;
+            transition: background-color 2s;
+          }
         }
         & .btn {
           background-color: #e74c3c;

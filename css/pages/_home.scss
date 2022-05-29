@@ -243,7 +243,15 @@
   }
   &--title {
     text-align: center;
-    // font-size: 1rem;
+    width: 100%;
+    display: inline-block;
+    color: black;
+    background-color: rgb(160, 110, 60);
+
+    body.dark & {
+      color: #f1f1f1;
+      transition: background-color 2s;
+    }
   }
   &--subtitle {
     // font-size: 0.8rem;
