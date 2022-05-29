@@ -83,7 +83,7 @@ body.dark .header__menuBtn--img { background-color: antiquewhite; padding: 0.25r
 
 body.dark .footer__container { -webkit-transition: background-color 2s; transition: background-color 2s; background-color: #191919; }
 
-.hero__productos { height: 50rem; margin-top: 4rem; background-image: url("../../images/bartender.jpg"); background-size: cover; background-position: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+.hero__productos { height: 50rem; margin-top: 4rem; background-image: url("images/bartender.jpg"); background-size: cover; background-position: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
 
 .hero__productos:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
 
@@ -139,23 +139,23 @@ body.dark .catalogo__cafes__card-text { color: #f1f1f1; -webkit-transition: back
 
 .catalogo__cafeteras__card { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 0 10px; border: 1px solid black; }
 
-.catalogo__cafeteras__card:hover { -webkit-transition: background 1s; transition: background 1s; background-color: burlywood; }
-
 .catalogo__cafeteras__card-img { height: 200px; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; justify-items: center; }
 
 .catalogo__cafeteras__card-img img { background-color: white; height: 100%; width: 100%; -o-object-fit: contain; object-fit: contain; }
 
-.catalogo__cafeteras__card-content { padding: 10px 20px; }
+.catalogo__cafeteras__card-content { padding: 10px 20px; background-color: antiquewhite; -webkit-transition: background-color 1s; transition: background-color 1s; }
+
+.catalogo__cafeteras__card-content:hover { -webkit-transition: background-color 1s; transition: background-color 1s; background-color: burlywood; }
 
 .catalogo__cafeteras__card-content .title { font-size: 25px; font-weight: 600; }
 
 body.dark .catalogo__cafeteras__card-content .title { color: #f1f1f1; -webkit-transition: background-color 2s; transition: background-color 2s; }
 
-.catalogo__cafeteras__card-content .subtitle { font-size: 20px; font-weight: 600; color: #e74c3c; line-height: 20px; }
+.catalogo__cafeteras__card-content .subtitle { font-size: 20px; font-weight: 600; color: white; background-color: #2828aa; line-height: 20px; }
 
 .catalogo__cafeteras__card-content .paragraph { text-align: justify; margin: 10px 0; }
 
-body.dark .catalogo__cafeteras__card-content .paragraph { color: #f1f1f1; -webkit-transition: background-color 2s; transition: background-color 2s; }
+body.dark .catalogo__cafeteras__card-content .paragraph { -webkit-transition: background-color 2s; transition: background-color 2s; }
 
 .catalogo__cafeteras__card-content .btn { background-color: #e74c3c; color: #fff; border: none; outline: none; font-size: 17px; padding: 10px auto; border-radius: 5px; cursor: pointer; -webkit-transition: 0.2s; transition: 0.2s; }
 
@@ -163,7 +163,38 @@ body.dark .catalogo__cafeteras__card-content .paragraph { color: #f1f1f1; -webki
 
 .catalogo__cafeteras__card-content .btn:active { -webkit-transform: scale(0.95); transform: scale(0.95); }
 
-.hero__contacto { height: 800px; margin-top: 4rem; background-image: url("../../images/coffee_bartender.jpg"); background-size: cover; background-position: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.catalogo__cafeteras .owl-item { background-color: transparent; }
+
+@media (max-width: 1000px) { .catalogo__cafeteras__slider { max-width: 1000px; }
+  .catalogo__cafeteras__card { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 0 5px; }
+  .catalogo__cafeteras__card-img { height: 250px; }
+  .catalogo__cafeteras__card-img img { background-color: white; height: 100%; width: 100%; }
+  .catalogo__cafeteras__card-content { padding: 10px 20px; }
+  .catalogo__cafeteras__card-content .title { font-size: 20px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .paragraph { margin: 10px 0; }
+  .catalogo__cafeteras__card-content .btn { font-size: 17px; padding: 10px auto; } }
+
+@media (max-width: 760px) { .catalogo__cafeteras__slider { max-width: 760px; }
+  .catalogo__cafeteras__card { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 0 5px; }
+  .catalogo__cafeteras__card-img { height: 250px; }
+  .catalogo__cafeteras__card-img img { height: 100%; width: 100%; }
+  .catalogo__cafeteras__card-content { padding: 5px 10px; }
+  .catalogo__cafeteras__card-content .title { font-size: 18px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .subtitle { font-size: 15px; }
+  .catalogo__cafeteras__card-content .paragraph { margin: 5px 0; }
+  .catalogo__cafeteras__card-content .btn { font-size: 15px; padding: 8px auto; border-radius: 5px; } }
+
+@media (max-width: 600px) { .catalogo__cafeteras__slider { max-width: 600px; }
+  .catalogo__cafeteras__card { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 0 5px; }
+  .catalogo__cafeteras__card-img { height: 250px; }
+  .catalogo__cafeteras__card-img img { height: 100%; width: 100%; }
+  .catalogo__cafeteras__card-content { padding: 5px 10px; }
+  .catalogo__cafeteras__card-content .title { font-size: 15px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .subtitle { font-size: 12px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .paragraph { margin: 5px 0; }
+  .catalogo__cafeteras__card-content .btn { font-size: 12px; padding: 5px auto; border-radius: 5px; } }
+
+.hero__contacto { height: 800px; margin-top: 4rem; background-image: url("images/coffee_bartender.jpg"); background-size: cover; background-position: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 @media (min-width: 1000px) { .hero__contacto { height: 800px; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
   .hero__contacto:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); } }
@@ -318,7 +349,7 @@ body.dark .cards .text__container { color: #f1f1f1; -webkit-transition: backgrou
   .cards .text__container { max-width: none; }
   .cards__image { width: 100%; -o-object-fit: cover; object-fit: cover; } }
 
-.hero { height: 50rem; width: 100%; max-width: 1200px; background-image: url("../../images/foto_header.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: -webkit-filter 1s linear; transition: -webkit-filter 1s linear; transition: filter 1s linear; transition: filter 1s linear, -webkit-filter 1s linear; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+.hero { height: 50rem; width: 100%; max-width: 1200px; background-image: url("images/foto_header.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: -webkit-filter 1s linear; transition: -webkit-filter 1s linear; transition: filter 1s linear; transition: filter 1s linear, -webkit-filter 1s linear; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
 
 .hero:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); -webkit-transition: -webkit-filter 1s linear; transition: -webkit-filter 1s linear; transition: filter 1s linear; transition: filter 1s linear, -webkit-filter 1s linear; }
 
