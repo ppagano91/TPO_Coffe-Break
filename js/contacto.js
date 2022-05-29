@@ -1,7 +1,9 @@
+// Variables para formulario
 const sendBtn = document.querySelector('#sendBtn');
 const comunidad = document.querySelector('#comunidadBtn');
 const form = document.querySelector('#form');
 
+// Variables auxiliares dentro de JS
 let data = {
   personas: [],
   mensajes: [],
@@ -14,10 +16,6 @@ if (registro) {
   comunidad.style.display = flex;
 }
 
-//4 método .createElement() es para crear un elemento en, por ejemplo, el formulario dentro de Listado de Personas
-// const contenedorPersonas = document.querySelector("#contenedorPersonas");
-
-//3 Crear función handleSendBtn
 const handleSendBtn = () => {
   cantErrors = 0;
   checkFields();
@@ -36,12 +34,13 @@ const handleSendBtn = () => {
     confirmarPassword: form.confirmarPassword.value,
   };
 
-  // agregamos la nueva persona al objeto de datos
+  // Agregamos la nueva persona al objeto de datos
   data = { ...data, personas: [...data.personas, nuevaPersona] };
-  console.log(data);
-  // limpiamos el formulario
+
+  // Limpiamos el formulario
   form.reset();
 
+  // Mostrar los datos por consola
   console.log(
     `${nuevaPersona.nombre} ${nuevaPersona.apellido} de ${getEdad(
       nuevaPersona.edad
@@ -50,6 +49,7 @@ const handleSendBtn = () => {
     )} `
   );
 
+  // Mostrar los datos con un alert
   alert(
     `¡Hola ${nuevaPersona.nombre}! Tu registro se ha realizado exitosamente.\n ¡Felicitaciones! Ya sos parte de la Comunidad Coffee Break`
   );
@@ -77,6 +77,7 @@ function getEdad(dateString) {
   return edad;
 }
 
+// Función para validación de campos
 const checkFields = () => {
   //capturar los valores ingresados por el usuario
   const nombre = form.nombre.value.trim();
@@ -92,8 +93,7 @@ const checkFields = () => {
   // Expresiones Regulares
   const expRegPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/;
 
-  //validando campo usuario
-  //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
+  //Validación de nombre y apellido
   !nombre
     ? errorValidacion(form.nombre, '*Campo Obligatorio')
     : validacionOk(form.nombre);
@@ -108,10 +108,13 @@ const checkFields = () => {
     : !validarEmail(email)
     ? errorValidacion(form.email, 'El e-mail no es válido')
     : validacionOk(form.email);
+
+  //Validación de Fecha Nacimiento
   !edad
     ? errorValidacion(form.edad, '*Campo Obligatorio')
     : validacionOk(form.edad);
 
+  // Validación de campo género (No logrado)
   // console.log(form.genero);
   // genero === ''
   //   ? errorValidacion(form.genero, '*Campo Obligatorio')
@@ -173,8 +176,7 @@ const modalText2 = document.getElementById('modalText2');
 /* ADD EVENT LISTENER */
 sendBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  // handleSendBtn();
-  console.log(data['personas']);
+  handleSendBtn();
   console.log(data['personas'][data['personas'].length - 1]);
   let lastUser = data['personas'][data['personas'].length - 1];
   if (validated) {
@@ -182,7 +184,7 @@ sendBtn.addEventListener('click', (e) => {
     modalContainer.style.visibility = 'visible';
     modalContent.classList.toggle('modal-close');
     modalTitle.innerHTML = `¡Felicitaciones!`;
-    modalText.innerHTML = `¡Hola Patricio! Tu registro se ha realizado exitosamente.`;
+    modalText.innerHTML = `¡Hola ${lastUser.nombre}! Tu registro se ha realizado exitosamente.`;
     modalText2.innerHTML = 'Ya sos parte de la Comunidad Coffee Break';
   }
 });
@@ -204,18 +206,4 @@ window.addEventListener('click', (e) => {
       modalContainer.style.visibility = 'hidden';
     }, 500);
   }
-});
-
-const videoCards = [...document.querySelectorAll('.video-card')];
-
-videoCards.forEach((item) => {
-  console.log(item);
-  item.addEventListener('mouseover', () => {
-    let video = item.children[1];
-    video.play();
-  });
-  item.addEventListener('mouseleave', () => {
-    let video = item.children[1];
-    video.pause();
-  });
 });
