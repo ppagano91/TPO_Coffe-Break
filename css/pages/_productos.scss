@@ -386,3 +386,50 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .catalogo {
+    &__cafeteras {
+      &__slider {
+        max-width: 600px;
+      }
+      &__card {
+        & {
+          flex: 1;
+          margin: 0 5px;
+        }
+
+        &-img {
+          height: 200px;
+
+          & img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        &-content {
+          & {
+            padding: 5px 10px;
+          }
+          & .title {
+            font-size: 12px;
+            font-weight: 600;
+          }
+          & .subtitle {
+            font-size: 10px;
+            font-weight: 600;
+          }
+          & .paragraph {
+            margin: 5px 0;
+            display: none;
+          }
+          & .btn {
+            font-size: 12px;
+            padding: 5px auto;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

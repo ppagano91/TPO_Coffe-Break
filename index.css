@@ -194,6 +194,16 @@ body.dark .catalogo__cafeteras__card-content .paragraph { -webkit-transition: ba
   .catalogo__cafeteras__card-content .paragraph { margin: 5px 0; }
   .catalogo__cafeteras__card-content .btn { font-size: 12px; padding: 5px auto; border-radius: 5px; } }
 
+@media (max-width: 480px) { .catalogo__cafeteras__slider { max-width: 600px; }
+  .catalogo__cafeteras__card { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin: 0 5px; }
+  .catalogo__cafeteras__card-img { height: 200px; }
+  .catalogo__cafeteras__card-img img { height: 100%; width: 100%; }
+  .catalogo__cafeteras__card-content { padding: 5px 10px; }
+  .catalogo__cafeteras__card-content .title { font-size: 12px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .subtitle { font-size: 10px; font-weight: 600; }
+  .catalogo__cafeteras__card-content .paragraph { margin: 5px 0; display: none; }
+  .catalogo__cafeteras__card-content .btn { font-size: 12px; padding: 5px auto; border-radius: 5px; } }
+
 .hero__contacto { height: 800px; margin-top: 4rem; background-image: url("images/coffee_bartender.jpg"); background-size: cover; background-position: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 @media (min-width: 1000px) { .hero__contacto { height: 800px; background-size: cover; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
